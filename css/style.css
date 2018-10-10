@@ -1,0 +1,546 @@
+/*Navigation with flexbox mobile first*/
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: avant-garde, avantgarde, helvetica, sans-serif;
+
+}
+
+
+.home-bg {
+    background: url("/images/home-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: auto;
+    background-color: #C3E0C4;
+}
+.norway-bg {
+    background: url("/images/hjoerne-fjell.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: auto;
+    background-color: #C3E0C4;
+}
+
+.tur-bg {
+    background: url("/images/hjoerne-tur.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: auto;
+    background-color: #C3E0C4;
+}
+.advice-bg {
+    background: url("/images/hjoernebastian.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: auto;
+    background-color: #C3E0C4;
+}
+
+html,
+body {
+
+    height: 100%;
+    margin: 0%
+}
+
+.wrapper {
+    min-height: 100%;
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: -50px;
+}
+
+header {
+    justify-content: space-around;
+    width: 100%;
+    padding: 30px 0;
+}
+
+#logo-vandrenorge {
+    display: flex;
+    align-items: flex;
+    margin-left: .5em;
+}
+
+#logo img {
+    width: 35%;
+    margin-left: auto;
+}
+
+#logo,
+#main-nav a {
+    color: #6B7E87;
+    text-decoration: none;
+}
+
+#main-nav {
+    display: flex;
+    margin-right: .5em;
+    list-style: none;
+}
+
+#main-nav a {
+    display: block;
+    margin-left: 1em;
+    font-size: 1.1em;
+    line-height: 1.4em;
+}
+
+#main-nav a:hover {
+    color: white;
+}
+
+.active {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.top10, .om-norge {
+    display: block;
+    margin-left:auto;
+    margin-right: 40px;
+    margin-top: 100px;
+    width: 50;
+
+}
+
+/*MAIN*/
+
+.main-images > .column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-images > .column > .column-left {
+    margin-top: 0px;
+    flex: 30%;
+    padding: 30px;
+}
+
+.main-images > .column > .column-right {
+    margin-top: 0px;
+    flex: 30%;
+    padding: 30px;
+}
+
+/*GALLERY*/
+.footer,
+.push {
+    height: 50px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: auto;
+}
+
+.column {
+    flex: 25%;
+    padding: 5px;
+
+}
+
+/*MEDIA QUERY MOBILE */
+
+@media all and (max-width: 599px) {
+
+    /*HEADER NAV*/
+
+    header {
+        display: block;
+    }
+
+    #logo-vandrenorge {
+        margin: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo-vandrenorge label {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+    #toggle:checked + #main-nav {
+        display: block;
+        color: #6B7E87;
+    }
+
+    #main-nav {
+        display: none;
+
+    }
+
+    #main-nav li {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #main-nav a {
+        margin: 0;
+    }
+
+    #main-nav li:last-of-type {
+        border-bottom: none;
+    }
+
+    body {
+        display: block;
+    }
+
+    .top10 .om-norge{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 90px;
+        width: 200px;
+    }
+
+    
+
+/*MAIN*/
+
+.main-images > .column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-images > .column > .column-left {
+    margin-top: 0px;
+    flex: 30%;
+    padding: 30px;
+}
+
+.main-images > .column > .column-right {
+    margin-top: 0px;
+    flex: 30%;
+    padding: 30px;
+}
+
+/*GALLERY*/
+.footer,
+.push {
+    height: 50px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: auto;
+}
+
+.column {
+    flex: 25%;
+    padding: 5px;
+
+}
+
+footer .row {
+    display: flex;
+    align-items: flex-end;
+}
+
+footer .column {
+    flex: 25%;
+    padding: 10px;
+}
+
+footer {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+#footer-nav a {
+    color: #6B7E87;
+    text-decoration: none;
+}
+
+#footer-nav {
+    display: flex;
+    margin-right: .5em;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+#footer-nav a {
+    display: block;
+    margin-left: 6.6em;
+    margin-bottom: 7em;
+    margin-top: 5em;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+#footer-nav a:hover {
+    color: white;
+}
+
+.active {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+}
+
+
+/*MEDIA QUERY TABLET AND ABOVE*/
+
+@media all and (min-width: 600px) {
+
+    /*HEADER NAV*/
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        /*remove this if you do not want the column layout whit logo above menu for medium size screens*/
+    }
+
+    #logo-vandrenorge {
+        margin: 10px;
+
+    }
+
+    #logo {
+        margin-top: .3em;
+    }
+
+    #main-nav {
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+    }
+
+    #main-nav a {
+        margin: 0 .5em;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    label {
+        display: none;
+    }
+
+
+    .top10, .om-norge {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 150px;
+        width: 50;
+
+    }
+}
+/*MAIN*/
+
+.main-images > .column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-images > .column > .column-left {
+    margin-top: 0px;
+    flex: 30%;
+    padding: 30px;
+}
+
+.main-images > .column > .column-right {
+    margin-top: 0px;
+    flex: 30%;
+    padding: 30px;
+}
+/*GALLERY*/
+.footer,
+.push {
+    height: 50px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: auto;
+}
+
+.column {
+    flex: 25%;
+    padding: 5px;
+
+}
+
+footer .row {
+    display: flex;
+    align-items: flex-end;
+}
+
+footer .column {
+    flex: 25%;
+    padding: 10px;
+}
+
+footer {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+#footer-nav a {
+    color: #6B7E87;
+    text-decoration: none;
+}
+
+#footer-nav {
+    display: flex;
+    margin-right: .5em;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+#footer-nav a {
+    display: block;
+    margin-left: 5.1em;
+    margin-bottom: 7em;
+    margin-top: -2em;
+    font-size: ,1em;
+    line-height: 1.4em;
+}
+
+#footer-nav a:hover {
+    color: white;
+}
+
+.active {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+}
+
+/*MEDIA QUERY LAPTOP AND ABOVE*/
+
+@media all and (min-width: 1024px) {
+
+    /*HEADER*/
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #logo-vandrenorge {
+        margin: 50px, 50px;
+        align-items: center;
+
+    }
+
+    #logo {
+        margin-top: .3em;
+    }
+
+    #main-nav {
+        justify-content: flex-end;
+        width: 100%;
+        margin-right: ;
+    }
+
+    #main-nav a {
+        margin: 0 .5em;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    label {
+        display: none;
+
+    }
+
+    .top10, .om-norge {
+        position: absolute;
+        top: 120px;
+        right: 180px;
+        width: %;
+        height: auto;
+        border: 0px;
+
+    
+}
+
+/*GALLERY*/
+.footer,
+.push {
+    height: 50px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: auto;
+}
+
+.column {
+    flex: 25%;
+    padding: 5px;
+
+}
+
+footer .row {
+    display: flex;
+    align-items: flex-end;
+}
+
+footer .column {
+    flex: 25%;
+    padding: 10px;
+}
+
+footer {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+#footer-nav a {
+    color: #6B7E87;
+    text-decoration: none;
+}
+
+#footer-nav {
+    display: flex;
+    margin-right: .5em;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+#footer-nav a {
+    display: block;
+    margin-left: 6.6em;
+    margin-bottom: 7em;
+    margin-top: 5em;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+#footer-nav a:hover {
+    color: white;
+}
+
+.active {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+}
